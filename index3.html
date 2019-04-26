@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Answer!</title>
+</head>
+<body>
+    <center>
+        <h1>Data Structure Lab Quiz 2 (SET C)</h1>
+        Challenge 1<br>
+        <input type="text" name="c1" id="c1" placeholder="Enter your answer here..." /><br>
+        <button id="c1_btn">Check</button><br/><br/>
+
+        Challenge 2<br>
+        <input type="text" name="c2" id="c2" placeholder="Enter your answer here..." /><br>
+        <button id="c2_btn">Check</button><br/><br/>
+
+        Challenge 3<br>
+        <input type="text" name="c3" id="c3" placeholder="Enter your answer here..." /><br>
+        <button id="c3_btn">Check</button><br/><br/>
+
+        Challenge 4<br>
+        <input type="text" name="c4" id="c4" placeholder="Enter your answer here..." /><br>
+        <button id="c4_btn">Check</button><br/><br/>
+<!--
+        Challenge 5<br>
+        <input type="text" name="c5" id="c5" placeholder="Enter your answer here..." /><br>
+        <button id="c5_btn">Check</button><br/><br/>
+-->
+    </center>
+
+<style type="text/css">
+    * {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 1em;
+    }
+    input[type="text"] {
+        width: 200px;
+    }
+    button {
+        margin-top: 5px;
+        width: 100px;
+        height: 30px;
+    }
+
+</style>
+
+<!-- jQuery -->
+<script
+  src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+
+<!-- Hash Algorithm -->
+<script src="md5.js"></script>
+
+<!-- JavaScript codes -->
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#c1_btn').click(function() {
+        var input = $('#c1').val();
+        var passhash = md5(input);
+        alert(passhash == '987784a33ca262d356593c244634a4d8' ? "CORRECT!": "Wrong.. Try Again!");
+    });
+    
+    $('#c2_btn').click(function() {
+        var input = $('#c2').val();
+        var passhash = md5(input);
+        alert(passhash == '42c31727b9f4f0dd1209ad2079a1aee8' ? "CORRECT!": "Wrong.. Try Again!");
+    });
+    
+    $('#c3_btn').click(function() {
+        var input = $('#c3').val();
+        var passhash = md5(input);
+        alert(passhash == '16df5639e6c0dff10004af7ae57d9f4e' ? "CORRECT!": "Wrong.. Try Again!");
+    });
+    
+    $('#c4_btn').click(function() {
+        var input = $('#c4').val();
+        var passhash = md5(input);
+        alert(passhash == '89f82939f8bc077ab5c66fdc3f151b07' ? "CORRECT!": "Wrong.. Try Again!");
+    });
+    
+    // $('#c5_btn').click(function() {
+    //     var input = $('#c5').val();
+    //     var passhash = md5(input);
+    //     alert(passhash == '' ? "CORRECT!": "Wrong.. Try Again!");
+    // });
+});
+</script>
+</body>
+</html>
